@@ -1,66 +1,87 @@
-## Foundry
+# Token Waifu EVM Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository contains the Ethereum Virtual Machine (EVM) smart contracts for the Token Waifu game ecosystem. The contracts are built with Solidity and follow modern security best practices.
 
-Foundry consists of:
+## Project Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Token Waifu is a GameFi project that utilizes blockchain technology to provide secure, transparent gameplay with digital assets. These smart contracts form the foundation of the on-chain elements of the game.
 
-## Documentation
+## Project Structure
 
-https://book.getfoundry.sh/
+The repository is organized into the following main directories:
 
-## Usage
+- `contracts/`: Contains all Solidity smart contracts
+- `scripts/`: Deployment and utility scripts
+- `test/`: Comprehensive test suite
+- `docs/`: Documentation for various aspects of the project
 
-### Build
+For more details, see [Project Structure](./docs/project-structure.md).
 
-```shell
-$ forge build
+## Contract Overview
+
+The Token Waifu ecosystem consists of several key contracts:
+
+- **Token Contracts**: ERC721 implementations for non-fungible tokens
+- **Game Logic Contracts**: Core gameplay mechanics
+
+See the [Contract Overview](./docs/contract-overview.md) for more information about each contract's purpose and functionality.
+
+## Upgrade Architecture
+
+This project implements upgradeable smart contracts using the OpenZeppelin Upgrades Plugins and the transparent proxy pattern. This allows for future improvements while preserving on-chain state and assets.
+
+For more information, refer to the [Upgrade Architecture](./docs/upgrade-architecture.md) document.
+
+## Development and Testing
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm or yarn
+- Hardhat
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd token-waifu-evm
+
+# Install dependencies
+npm install
+# or
+yarn install
 ```
 
-### Test
+### Running Tests
 
-```shell
-$ forge test
+The project includes a comprehensive testing suite. Follow the [Testing Guide](./docs/testing-guide.md) for detailed instructions on running tests and ensuring code quality.
+
+```bash
+forge test
 ```
 
-### Format
+## Deployment
 
-```shell
-$ forge fmt
-```
+For detailed deployment instructions, including environment setup, network configuration, and verification steps, see the [Deployment Guide](./docs/deployment-guide.md).
 
-### Gas Snapshots
+## Signature Generation
 
-```shell
-$ forge snapshot
-```
+The project uses EIP-712 typed signatures for various operations. For information on how signatures are generated and verified within the system, see the [Signature Generation](./docs/signature-generation.md) guide.
 
-### Anvil
+## Security
 
-```shell
-$ anvil
-```
+These contracts follow security best practices including:
+- Checks-Effects-Interactions pattern
+- Comprehensive access control
+- Thorough testing
 
-### Deploy
+## License
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+[MIT/Apache-2.0/GPL-3.0] (Replace with actual license)
 
-### Cast
+## Contributing
 
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Contributions are welcome! Please feel free to submit a Pull Request.

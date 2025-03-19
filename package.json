@@ -1,0 +1,20 @@
+{
+  "name": "waifu-evm",
+  "version": "1.0.0",
+  "description": "Waifu NFT and Token Claim System",
+  "scripts": {
+    "mint": "ts-node scripts/ts/mintNFT.ts",
+    "manage": "ts-node scripts/ts/manageWaifuClaim.ts",
+    "claim": "ts-node scripts/ts/signAndClaim.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.11.1",
+    "viem": "^2.23.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
